@@ -27,8 +27,8 @@ int main (int argc, char **argv)
 
   /* fill vectors */
   for (i = 0; i < n; ++i) {
-    a[i] = i;
-    b[i] = 2./i;
+    a[i] = i+1;
+    b[i] = 2 ./ (i+1);
   }
 
   timestamp_type time1, time2;
