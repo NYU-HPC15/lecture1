@@ -1,8 +1,8 @@
 /* multiply vector components, write into a vector,
- *  and compute the inner product  */
+ *  and compute the inner product
+ * Need to compile this with an mpi-capable compiler (depending on your * architecture, mpicc or similar) */
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include "util.h"
 #include <mpi.h>
 
