@@ -18,8 +18,8 @@ int main (int argc, char **argv)
     abort();
   }
 
-  n = atoi(argv[1]);
-  passes = atoi(argv[2]);
+  n = atol(argv[1]);
+  passes = atol(argv[2]);
 
   a = (double *) malloc(sizeof(double) * n);
   b = (double *) malloc(sizeof(double) * n);
@@ -28,7 +28,7 @@ int main (int argc, char **argv)
   /* fill vectors */
   for (i = 0; i < n; ++i) {
     a[i] = i+1;
-    b[i] = 2 ./ (i+1);
+    b[i] = 2.0 / (i+1);
   }
 
   timestamp_type time1, time2;
