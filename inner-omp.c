@@ -1,9 +1,7 @@
 /* multiply vector components, write into a vector,
  *  and compute the inner product  */
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include "util.h"
 #include <omp.h>
 
@@ -48,6 +46,7 @@ int main (int argc, char **argv)
 	c[i] = a[i] * b[i];
       }
       prod = 0.0;
+#pragma omp parallel for reduction(+:prod)
       for (i = 0; i < n; ++i) {
       	prod += c[i];
       }
